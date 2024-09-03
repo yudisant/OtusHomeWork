@@ -95,14 +95,17 @@ public class Main {
                         Animals animals = animalFactory.create(AnimalData.valueOf(animalType.toUpperCase(Locale.ROOT)));
                         animal.add(animals);
 
+                        animals.say();
+
                         break;
                     }
                     break;
 
                 case LIST:
-                    for (Animals animal1 : animal) {
-                        System.out.println(animal.toString());
-                    }
+                    animal.forEach(System.out::println);
+//                    for (Animals animals : animal) {
+//                        System.out.println(animal.toString());
+//                    }
                     break;
 
                 case EXIT:
