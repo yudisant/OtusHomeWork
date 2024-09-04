@@ -7,10 +7,7 @@ import data.Commands;
 import factory.AnimalFactory;
 import utils.ValidateNumber;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     private static Scanner scanner;
@@ -53,7 +50,8 @@ public class Main {
                 case ADD:
 
                     while (true) {
-                        System.out.println("Введите тип животного: CAT, DOG, DUCK");
+                        System.out.print("Введите тип животного: ");
+                        System.out.println(Arrays.toString(AnimalData.values()));
                         String animalType = scanner.next().toUpperCase().trim();
 
                         boolean isAnimalValid = false;
