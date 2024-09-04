@@ -1,7 +1,4 @@
 import animals.Animals;
-import animals.birds.Duck;
-import animals.pets.Cat;
-import animals.pets.Dog;
 import data.AnimalData;
 import data.Commands;
 import factory.AnimalFactory;
@@ -66,8 +63,6 @@ public class Main {
                             System.out.println("Недопустимый тип животного.");
                             continue;
                         }
-
-                        AnimalData animalData = AnimalData.valueOf(animalType);
 
                         System.out.println("Введите возраст животного: ");
                         int animalAge = enterNumberData("Неверно введён возраст! \nПовторите ввод: ", 5);
