@@ -96,9 +96,6 @@ public class Main {
 
                 case LIST:
                     animal.forEach(System.out::println);
-//                    for (Animals animals : animal) {
-//                        System.out.println(animal.toString());
-//                    }
                     break;
 
                 case EXIT:
