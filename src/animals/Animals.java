@@ -69,7 +69,7 @@ public abstract class Animals {
     private String years() {
         int ostatok = age % 10;
 
-        if((age >= 11 && age <= 19) || ostatok == 0 || ostatok >=5) {
+        if(age >= 11 || ostatok == 0 || ostatok >=5) {
             return "лет";
         }
 
