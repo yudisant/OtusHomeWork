@@ -33,6 +33,7 @@ public class Main {
 
     public static void main(String[] args) {
         validateNumber = new ValidateNumber();
+        scanner = new Scanner(System.in);
 
         List<Animals> animal = new ArrayList<>();
 
