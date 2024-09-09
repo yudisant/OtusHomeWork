@@ -13,7 +13,7 @@ public class Duck extends Animals implements Flying{
     }
 
     @Override
-    public void Fly() {
+    public void fly() {
         System.out.println("Я лечу");
     }
 }

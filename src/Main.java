@@ -23,9 +23,11 @@ public class Main {
             dataStr = scanner.next();
         }
         int number = Integer.parseInt(dataStr);
-        if(number >0) {
+        if(number > 0) {
+            if (number < 100) {
             return number;
         }
+            }
         System.out.println(errorMessage);
         enterNumberData(errorMessage, --attempt);
         return -1;
@@ -95,17 +97,18 @@ public class Main {
                     break;
 
                 case LIST:
+                    if (animal.isEmpty()) {
+                        System.out.println("Список пуст. Добавьте животное(ADD) или выйдите(EXIT)");
+                    }
                     animal.forEach(System.out::println);
                     break;
 
                 case EXIT:
                     System.exit(0);
-                    System.out.println("EXIT");
 
                 default:
                     System.out.println("Неверная команда!");
             }
         }
-//        scanner.close();
     }
 }
