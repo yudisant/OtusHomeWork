@@ -6,6 +6,8 @@ import utils.ValidateNumber;
 
 import java.util.*;
 
+import static java.lang.Integer.parseInt;
+
 public class Main {
     private static Scanner scanner;
     private static ValidateNumber validateNumber;
@@ -18,20 +20,23 @@ public class Main {
 
         String dataStr = scanner.next();
 
-        while (!validateNumber.isNumber(dataStr)) {
-            System.out.println(errorMessage);
-            dataStr = scanner.next();
-        }
-        int number = Integer.parseInt(dataStr);
-        if(number > 0) {
-            if (number < 100) {
-            return number;
-        }
+        try {
+
+            while (!validateNumber.isNumber(dataStr)) {
+                System.out.println(errorMessage);
+                dataStr = scanner.next();
             }
+            int number = Integer.parseInt(dataStr);
+            if (number > 0) {
+                return number;
+            }
+        } catch (NumberFormatException ex) {
+        }
         System.out.println(errorMessage);
         enterNumberData(errorMessage, --attempt);
         return -1;
     }
+
 
     public static void main(String[] args) {
         validateNumber = new ValidateNumber();
@@ -104,6 +109,7 @@ public class Main {
                     break;
 
                 case EXIT:
+                    System.out.println("Выход");
                     System.exit(0);
 
                 default:
