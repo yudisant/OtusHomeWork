@@ -21,7 +21,6 @@ public class Main {
         String dataStr = scanner.next();
 
         try {
-
             while (!validateNumber.isNumber(dataStr)) {
                 System.out.println(errorMessage);
                 dataStr = scanner.next();
@@ -72,13 +71,13 @@ public class Main {
                         }
 
                         System.out.println("Введите возраст животного: ");
-                        int animalAge = enterNumberData("Неверно введён возраст! \nПовторите ввод: ", 5);
+                        int animalAge = enterNumberData("Неверно введён возраст! \nПовторите ввод: ", 3);
                         if (animalAge == -1) {
                             System.out.println("Вы потратили все попытки ввода");
                             continue;
                         }
                         System.out.println("Введите вес животного: ");
-                        int animalWeight = enterNumberData("Неверно введён вес! \nПовторите ввод: ", 5);
+                        int animalWeight = enterNumberData("Неверно введён вес! \nПовторите ввод: ", 3);
                         if (animalWeight == -1) {
                             System.out.println("Вы потратили все попытки ввода");
                             continue;
