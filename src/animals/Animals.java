@@ -73,7 +73,7 @@ public abstract class Animals {
             return "лет";
         }
 
-        if(ostatok >= 2 && ostatok <= 4) {
+        if(ostatok >= 2) {
             return "года";
         }
 
